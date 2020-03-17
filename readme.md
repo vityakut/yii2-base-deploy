@@ -1,13 +1,6 @@
-<div align="center">
+# Yii2 Base Deploy
 
-# Laravel Deploy
-
-[![ForTheBadge built-with-love](http://ForTheBadge.com/images/badges/built-with-love.svg)](https://ngocquyhoang.com)
-[![forthebadge](https://forthebadge.com/images/badges/contains-cat-gifs.svg)](https://ngocquyhoang.com)
-[![forthebadge](https://forthebadge.com/images/badges/powered-by-water.svg)](https://ngocquyhoang.com)
-
-</div>
-
+Deploy Yii2 Base Application to Server via SSH by RSync
 
 ## Config example:
 
@@ -25,16 +18,20 @@ jobs:
         steps:
             -   name: Checkout Repository
                 uses: actions/checkout@master
+
             -   name: Setup Enviroment
                 uses: shivammathur/setup-php@v2
                 with:
-                    php-version: '7.4'
+                    php-version: '7.1'
+
             -   name: Speed up the packages installation process
                 run: composer global require hirak/prestissimo
+
             -   name: Install Packages
                 run: composer install --no-dev
+
             -   name: Deploy to Server
-                uses: ngocquyhoang/deploy@laravel
+                uses: yiier/yii2-base-deploy@master
                 with:
                     user: user
                     host: host

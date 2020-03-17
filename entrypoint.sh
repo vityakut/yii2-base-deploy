@@ -32,9 +32,9 @@ then
 	echo $'\n' "------ RELOADING PERMISSION -------------------" $'\n'
 
 	ssh -i /root/.ssh/id_rsa -t $1@$2 "sudo chown -R $4:$4 $3"
-	ssh -i /root/.ssh/id_rsa -t $1@$2 "sudo chmod 775 -R $3"
-	ssh -i /root/.ssh/id_rsa -t $1@$2 "sudo chmod 777 -R $3/storage"
-	ssh -i /root/.ssh/id_rsa -t $1@$2 "sudo chmod 777 -R $3/public"
+	ssh -i /root/.ssh/id_rsa -t $1@$2 "sudo chmod 775 -R $3/web"
+	ssh -i /root/.ssh/id_rsa -t $1@$2 "sudo chmod 777 -R $3/runtime"
+	ssh -i /root/.ssh/id_rsa -t $1@$2 "sudo chmod 777 -R $3/web/assets"
 
 	echo $'\n' "------ CONGRATS! DEPLOY SUCCESSFUL!!! ---------" $'\n'
 	exit 0
