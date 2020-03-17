@@ -1,7 +1,7 @@
 name: 'Yii2 Base Deploy'
 
 description: 'Deploy Yii2 Base Application to Server via SSH by RSync'
-author: 'Hoang Ngoc Quy'
+author: 'forecho'
 branding:
     icon: 'send'
     color: 'green'
