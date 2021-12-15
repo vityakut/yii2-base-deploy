@@ -24,7 +24,7 @@ rsync --progress -avzh \
 	--exclude='readme.md' \
 	--exclude='README.md' \
 	-e "ssh -i /root/.ssh/id_rsa" \
-	--rsync-path="sudo rsync" . $1@$2:$3
+	--rsync-path="rsync" . $1@$2:$3
 
 if [ $? -eq 0 ]
 then
