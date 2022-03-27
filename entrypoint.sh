@@ -14,7 +14,7 @@ else
 	echo $'\n' "------ CONFIG SUCCESSFUL! ---------------------" $'\n'
 fi
 
-rsync --progress -avzh \
+rsync --progress -avzhO \
 	--exclude='.git/' \
 	--exclude='.git*' \
 	--exclude='.editorconfig' \
